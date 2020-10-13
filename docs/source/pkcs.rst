@@ -30,11 +30,11 @@ The PKCS utility defaults to starting in encrypt mode, and defaults to using ``~
     Using RSA keyfile: [/home/paul/.ssh/id_rsa]
     [MyPassword] -> [uVfL6crigKpeo9pPPByUAQb3OgC1SoVXfjnc4iP0O3/RTOgdn5gmXebJ53/LQoVVfvywgQafUb9TchIKNJwbMaPa/PXVGbha/h1m3zlyrK9GXGVZoN5ic3eumcWZxOy3iCPp9J4PLHARjDmaHzs7FPloQwhqn/rY7pdY41L4d9K72Xvc+EZoEoMdC76XKWklZH1E8RuhW7J54Qq2pf0DPyddqI5XX7jecC5aISGx9WSQAVRSlWtBq8fJ8caAaIkqIRww210Dzhv9j8n9JyW1UGeKTMZv51pWL9goZH9oaNFp5n3t8nnicUSQjIFY+HRIOEKjzy4JVguCIVOw9A8uCw==]
 
-The very long string "uVfL6crigKpeo9pPPByUAQb3OgC1SoVXfjnc4iP0O3/RTOgdn5gmXebJ53/LQoVVfvywgQafUb9TchIKNJwbMaPa/PXVGbha/h1m3zlyrK9GXGVZoN5ic3eumcWZxOy3iCPp9J4PLHARjDmaHzs7FPloQwhqn/rY7pdY41L4d9K72Xvc+EZoEoMdC76XKWklZH1E8RuhW7J54Qq2pf0DPyddqI5XX7jecC5aISGx9WSQAVRSlWtBq8fJ8caAaIkqIRww210Dzhv9j8n9JyW1UGeKTMZv51pWL9goZH9oaNFp5n3t8nnicUSQjIFY+HRIOEKjzy4JVguCIVOw9A8uCw==" is the resulting ciphertext. Your actual result string will be different, since you will be using a different RSA key.
+The very long string ``uVfL6crigKpeo ...`` is the resulting ciphertext. Your actual result string will be different, since you will be using a different RSA key.
 
 Decrypting A Password
 ---------------------
-The plaintext password "MyPassword" is encrypted into a long Base64 encoded string, and printed to the console. The encrypted string inside the second pair of brackets can be decrypted with **python -m radssh.pkcs --decrypt uVfL6crigKpeo9pPPByUAQb3OgC1SoVXfjnc4iP0O3/RTOgdn5gmXebJ53/LQoVVfvywgQafUb9TchIKNJwbMaPa/PXVGbha/h1m3zlyrK9GXGVZoN5ic3eumcWZxOy3iCPp9J4PLHARjDmaHzs7FPloQwhqn/rY7pdY41L4d9K72Xvc+EZoEoMdC76XKWklZH1E8RuhW7J54Qq2pf0DPyddqI5XX7jecC5aISGx9WSQAVRSlWtBq8fJ8caAaIkqIRww210Dzhv9j8n9JyW1UGeKTMZv51pWL9goZH9oaNFp5n3t8nnicUSQjIFY+HRIOEKjzy4JVguCIVOw9A8uCw==**::
+The plaintext password "MyPassword" is encrypted into a long Base64 encoded string, and printed to the console. The encrypted string inside the second pair of brackets can be decrypted with ``python -m radssh.pkcs --decrypt uVfL6crigKpeo...``
 
     [paul@pkapp2 ~]$ python -m radssh.pkcs --decrypt uVfL6crigKpeo9pPPByUAQb3OgC1SoVXfjnc4iP0O3/RTOgdn5gmXebJ53/LQoVVfvywgQafUb9TchIKNJwbMaPa/PXVGbha/h1m3zlyrK9GXGVZoN5ic3eumcWZxOy3iCPp9J4PLHARjDmaHzs7FPloQwhqn/rY7pdY41L4d9K72Xvc+EZoEoMdC76XKWklZH1E8RuhW7J54Qq2pf0DPyddqI5XX7jecC5aISGx9WSQAVRSlWtBq8fJ8caAaIkqIRww210Dzhv9j8n9JyW1UGeKTMZv51pWL9goZH9oaNFp5n3t8nnicUSQjIFY+HRIOEKjzy4JVguCIVOw9A8uCw==
     Using RSA keyfile: [/home/paul/.ssh/id_rsa]
